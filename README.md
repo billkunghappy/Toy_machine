@@ -13,22 +13,42 @@
 以 gameObject.GetComponentInChildren<PartName_main_control>().get_signal( *signal* );
 來傳送訊號給元件，其中 *signal* 即為訊號，有可能為各種型態。
 
-### 元件區分
+## 元件區分
+
 列出目前有劃分出來的元件：
-* 七段顯示器{	<br />
-	主要 script 	: <br />dis7_main_controll	<br />
-	要求訊號型態	: <br />int signal[4]			<br />
-	訊號對應		: <br />signal[0] 對到 七段顯示器第 0 位，以此類推	<br />
-}
 
-* PC 燈號{<br />
-	主要 script 	: <br />PC_light_main_control	<br />
-	要求訊號型態	: <br />int signal[2]			<br />
-	訊號對應		: <br />signal[0] 對到 PC 第 0 位， signal[1] 對到 PC 第 1 位 	<br />
-}
-<br />
+### 七段顯示器
+	* 主要 script:
+		```
+		dis7_main_controll
+		```
+	* 要求訊號型態:
+		```
+		int signal[4]	
+		```
+	* 訊號對應:
+		```
+		signal[0] 對到 七段顯示器第 0 位，以此類推
+		```
 
-//有新的元件的話放這裡ㄅ
+### PC 燈號
+	* 主要 script:
+		```
+		PC_light_main_control
+		```
+	* 要求訊號型態:
+		```
+		int signal[2]
+		```
+	* 訊號對應:
+		```
+		signal[0] 對到 PC 第 0 位， signal[1] 對到 PC 第 1 位 
+		```
+
+## 附註：
+* 有新的元件的話放上面ㄅ
+* PC light 和 七段顯示器的測試功能(Upload()函式)都還沒拔掉
+
 
 
 
