@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/text_title.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/display7_3_control.cs">
     <Files>
-      <File FileName="Assets/text_title.cs" Line="9" Column="27" />
+      <File FileName="Assets/display7_3_control.cs" Line="10" Column="74" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
