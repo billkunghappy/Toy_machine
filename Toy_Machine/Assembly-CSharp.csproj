@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\dis7_main_control.cs" />
+     <Compile Include="Assets\PC_light\PC_light_dig0_control.cs" />
+     <Compile Include="Assets\PC_light\PC_light_dig1_control.cs" />
+     <Compile Include="Assets\PC_light\PC_light_main_control.cs" />
+     <Compile Include="Assets\sev_display_light\dis7_main_control.cs" />
      <Compile Include="Assets\sev_display_light\display_7_0_control.cs" />
      <Compile Include="Assets\sev_display_light\display_7_1_control.cs" />
      <Compile Include="Assets\sev_display_light\display_7_2_control.cs" />
