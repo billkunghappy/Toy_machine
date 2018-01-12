@@ -51,7 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\displat_3\display7_3_control.cs" />
+     <Compile Include="Assets\dis7_main_control.cs" />
+     <Compile Include="Assets\sev_display_light\display_7_0_control.cs" />
+     <Compile Include="Assets\sev_display_light\display_7_1_control.cs" />
+     <Compile Include="Assets\sev_display_light\display_7_2_control.cs" />
+     <Compile Include="Assets\sev_display_light\display7_3_control.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
