@@ -16,7 +16,7 @@
 ## 元件區分
 
 列出目前有劃分出來的元件：
-
+### INPUT
 ### 七段顯示器
 	* 主要 script:
 		dis7_main_controll
@@ -41,6 +41,7 @@
 	* 訊號對應:
 		signal[0] 對到 Instr_light 第 0 位，以此類推
 
+### OUTPUT
 ### ADDR 按鈕
 	* 主要 script:
 		switch_addr_main_control
@@ -48,6 +49,14 @@
 		不需訊號
 	* 訊號對應:
 		直接 call get_signal() 會以 int[8] 的型態回傳八個 switch 的狀態(開：1 關：0)
+
+### DATA 按鈕
+	* 主要 script:
+		switch_data_main_control
+	* 要求訊號型態:
+		不需訊號
+	* 訊號對應:
+		直接 call get_signal() 會以 int[16] 的型態回傳十六個 switch 的狀態(開：1 關：0)
 
 ## 附註：
 * 有新的元件的話放上面ㄅ

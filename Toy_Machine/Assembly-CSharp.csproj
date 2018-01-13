@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\input\switch_addr\switch_addr_each.cs" />
      <Compile Include="Assets\input\switch_addr\switch_addr_main_control.cs" />
+     <Compile Include="Assets\input\switch_data\switch_data_each.cs" />
+     <Compile Include="Assets\input\switch_data\switch_data_main_control.cs" />
      <Compile Include="Assets\output\Instr_light\Instr_light_dig0_control.cs" />
      <Compile Include="Assets\output\Instr_light\Instr_light_dig1_control.cs" />
      <Compile Include="Assets\output\Instr_light\Instr_light_dig2_control.cs" />
