@@ -16,74 +16,7 @@ public class PC_light_dig1_control : MonoBehaviour {
 		}
 	}
 	public void get_signal(int main_signal){//a digit from 0~16
-		int[] signal_send;
-		switch (main_signal) {
-		case 0:
-			signal_send = new int[4]{ 0, 0, 0, 0 };
-			update_light (signal_send);
-			break;
-		case 1:
-			signal_send = new int[4]{ 0, 0, 0, 1 };
-			update_light (signal_send);
-			break;
-		case 2:
-			signal_send = new int[4]{ 0, 0, 1, 0 };
-			update_light (signal_send);
-			break;
-		case 3:
-			signal_send = new int[4]{ 0, 0, 1, 1 };
-			update_light (signal_send);
-			break;
-		case 4:
-			signal_send = new int[4]{ 0, 1, 0, 0 };
-			update_light (signal_send);
-			break;
-		case 5:
-			signal_send = new int[4]{ 0, 1, 0, 1 };
-			update_light (signal_send);
-			break;
-		case 6:
-			signal_send = new int[4]{ 0, 1, 1, 0 };
-			update_light (signal_send);
-			break;
-		case 7:
-			signal_send = new int[4]{ 0, 1, 1, 1 };
-			update_light (signal_send);
-			break;
-		case 8:
-			signal_send = new int[4]{ 1, 0, 0, 0 };
-			update_light (signal_send);
-			break;
-		case 9:
-			signal_send = new int[4]{ 1, 0, 0, 1 };
-			update_light (signal_send);
-			break;
-		case 10:
-			signal_send = new int[4]{ 1, 0, 1, 0 };
-			update_light (signal_send);
-			break;
-		case 11:
-			signal_send = new int[4]{ 1, 0, 1, 1 };
-			update_light (signal_send);
-			break;
-		case 12:
-			signal_send = new int[4]{ 1, 1, 0, 0 };
-			update_light (signal_send);
-			break;
-		case 13:
-			signal_send = new int[4]{ 1, 1, 0, 1 };
-			update_light (signal_send);
-			break;
-		case 14:
-			signal_send = new int[4]{ 1, 1, 1, 0 };
-			update_light (signal_send);
-			break;
-		case 15:
-			signal_send = new int[4]{ 1, 1, 1, 1 };
-			update_light (signal_send);
-			break;
-		}
-
+		update_light(gameObject.GetComponent<convert_signal>().light_convert16(main_signal));
 	}
 
 	void Start () {

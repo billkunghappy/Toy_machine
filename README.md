@@ -19,34 +19,32 @@
 
 ### 七段顯示器
 	* 主要 script:
-		```
 		dis7_main_controll
-		```
 	* 要求訊號型態:
-		```
 		int signal[4]	
-		```
 	* 訊號對應:
-		```
 		signal[0] 對到 七段顯示器第 0 位，以此類推
-		```
 
 ### PC 燈號
 	* 主要 script:
-		```
 		PC_light_main_control
-		```
 	* 要求訊號型態:
-		```
 		int signal[2]
-		```
 	* 訊號對應:
-		```
 		signal[0] 對到 PC 第 0 位， signal[1] 對到 PC 第 1 位 
-		```
+
+### Instruction 燈號
+	* 主要 script:
+		Instr_light_main_control
+	* 要求訊號型態:
+		int signal[4]
+	* 訊號對應:
+		signal[0] 對到 Instr_light 第 0 位，以此類推
+
 
 ## 附註：
 * 有新的元件的話放上面ㄅ
+* 多個 object 共享的 script 丟 useful_script 資料夾裡吧
 * PC light 和 七段顯示器的測試功能(Upload()函式)都還沒拔掉
 
 
