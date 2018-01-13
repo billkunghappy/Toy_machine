@@ -7,8 +7,16 @@ public class switch_data_main_control : MonoBehaviour {
 	public int[] Data_status=new int[16];//init to zero
 	public Button[] sixteen_switches;
 	// Use this for initialization
-	public int[] get_signal(){
-		return Data_status;
+	public int[,] get_signal(){
+		int count = 0;
+		int[,] return_ary = new int[4,4];
+		for (int i = 0; i < 4; i++) {
+			for(int j=0;j<4;j++){
+				return_ary[i,j]=Data_status[count];
+				count+=1;
+			}
+		}
+		return return_ary;
 	}
 	void Start () {
 		sixteen_switches = GetComponentsInChildren<Button> ();

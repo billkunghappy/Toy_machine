@@ -7,8 +7,16 @@ public class switch_addr_main_control : MonoBehaviour {
 	public int[] Addr_status=new int[8]{0,0,0,0,0,0,0,0};//init to zero
 	public Button[] eight_switches;
 	// Use this for initialization
-	public int[] get_signal(){
-		return Addr_status;
+	public int[,] get_signal(){
+		int count = 0;
+		int[,] return_ary = new int[2,4];
+		for (int i = 0; i < 2; i++) {
+			for(int j=0;j<4;j++){
+				return_ary[i,j]=Addr_status[count];
+				count+=1;
+			}
+		}
+		return return_ary;
 	}
 	void Start () {
 		eight_switches = GetComponentsInChildren<Button> ();
