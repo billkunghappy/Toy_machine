@@ -41,6 +41,13 @@
 	* 訊號對應:
 		signal[0] 對到 Instr_light 第 0 位，以此類推
 
+### ADDR 按鈕
+	* 主要 script:
+		switch_addr_main_control
+	* 要求訊號型態:
+		不需訊號
+	* 訊號對應:
+		直接 call get_signal() 會以 int[8] 的型態回傳八個 switch 的狀態(開：1 關：0)
 
 ## 附註：
 * 有新的元件的話放上面ㄅ

@@ -51,19 +51,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Instr_light\Instr_light_dig0_control.cs" />
-     <Compile Include="Assets\Instr_light\Instr_light_dig1_control.cs" />
-     <Compile Include="Assets\Instr_light\Instr_light_dig2_control.cs" />
-     <Compile Include="Assets\Instr_light\Instr_light_dig3_control.cs" />
-     <Compile Include="Assets\Instr_light\Instr_light_main_control.cs" />
-     <Compile Include="Assets\PC_light\PC_light_dig0_control.cs" />
-     <Compile Include="Assets\PC_light\PC_light_dig1_control.cs" />
-     <Compile Include="Assets\PC_light\PC_light_main_control.cs" />
-     <Compile Include="Assets\sev_display_light\dis7_main_control.cs" />
-     <Compile Include="Assets\sev_display_light\display_7_0_control.cs" />
-     <Compile Include="Assets\sev_display_light\display_7_1_control.cs" />
-     <Compile Include="Assets\sev_display_light\display_7_2_control.cs" />
-     <Compile Include="Assets\sev_display_light\display7_3_control.cs" />
+     <Compile Include="Assets\input\switch_addr\switch_addr_each.cs" />
+     <Compile Include="Assets\input\switch_addr\switch_addr_main_control.cs" />
+     <Compile Include="Assets\output\Instr_light\Instr_light_dig0_control.cs" />
+     <Compile Include="Assets\output\Instr_light\Instr_light_dig1_control.cs" />
+     <Compile Include="Assets\output\Instr_light\Instr_light_dig2_control.cs" />
+     <Compile Include="Assets\output\Instr_light\Instr_light_dig3_control.cs" />
+     <Compile Include="Assets\output\Instr_light\Instr_light_main_control.cs" />
+     <Compile Include="Assets\output\PC_light\PC_light_dig0_control.cs" />
+     <Compile Include="Assets\output\PC_light\PC_light_dig1_control.cs" />
+     <Compile Include="Assets\output\PC_light\PC_light_main_control.cs" />
+     <Compile Include="Assets\output\sev_display_light\dis7_main_control.cs" />
+     <Compile Include="Assets\output\sev_display_light\display_7_0_control.cs" />
+     <Compile Include="Assets\output\sev_display_light\display_7_1_control.cs" />
+     <Compile Include="Assets\output\sev_display_light\display_7_2_control.cs" />
+     <Compile Include="Assets\output\sev_display_light\display7_3_control.cs" />
      <Compile Include="Assets\useful_script\convert_signal.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
