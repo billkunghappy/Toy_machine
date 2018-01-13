@@ -9,21 +9,8 @@ public class PC_light_main_control : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-
+		int[] init_signal = new int[2]{ 0, 1 };
+		get_signal (init_signal);
 	}
-
-	// Update is called once per frame
-	void Update () {
-		//test
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			//test
-			int[] test=new int[2]{1,2};
-			get_signal (test);
-		}
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			//test
-			int[] test=new int[2]{15,14};
-			get_signal (test);
-		}
-	}
+		
 }
