@@ -14,7 +14,7 @@ public class PC : MonoBehaviour {
 		P_C[0]=Addr[0];
 		P_C[1]=Addr[1];
 
-		//if return 1, Main_controller will update pc_lights
+		//if return 1, Main_controller update pc_lights
 		return 1;
 	}
 	void Start () {
