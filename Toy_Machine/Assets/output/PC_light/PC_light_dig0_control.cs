@@ -9,7 +9,7 @@ public class PC_light_dig0_control : MonoBehaviour {
 	void update_light(int[] signal_ary){//signal ary[4] indicate which should be lighted
 		for (int i = 0; i < 4; i++) {
 			if (signal_ary [i] == 1) {
-				object_ary [i].material.color = Color.yellow;
+				object_ary [i].material.color = Color.green;
 			} else {
 				object_ary [i].material.color = Color.gray;
 			}

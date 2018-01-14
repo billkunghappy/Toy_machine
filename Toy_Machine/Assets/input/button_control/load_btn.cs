@@ -18,7 +18,7 @@ public class load_btn : MonoBehaviour {
 	}
 	void Load_input(){
 		if(main_controller.GetComponent<Main_controller>().check_running()==0){//not running
-			main_controller.GetComponent<Main_controller> ().Load_input ();
+			main_controller.GetComponent<Main_controller> ().Load_input (0);
 			Debug.Log ("press load");
 		}
 	}

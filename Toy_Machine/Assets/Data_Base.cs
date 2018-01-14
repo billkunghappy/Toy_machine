@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Data_Base : MonoBehaviour {
 	public int[,] all_Memory = new int[256,4];//16*16, 4digit data(16進)
@@ -13,7 +14,6 @@ public class Data_Base : MonoBehaviour {
 		}
 		return return_data;
 	}
-
 	public int set_Memory(int[] ADDR,int[] Data){//return 1 if set successfully
 		for (int i = 0; i < 2; i++) {
 			if (ADDR [i] >= 16 || ADDR [i] < 0) {

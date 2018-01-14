@@ -79,6 +79,6 @@
 * 多個 object 共享的 script 丟 useful_script 資料夾裡吧
 * PC light 和 七段顯示器的測試功能(Upload()函式)都還沒拔掉
 
-case 8
+### 懶得耕了= =
 
 

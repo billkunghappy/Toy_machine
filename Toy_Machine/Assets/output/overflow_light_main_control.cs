@@ -15,5 +15,10 @@ public class overflow_light_main_control : MonoBehaviour {
 	void Start () {
 		get_signal (0);//init to gray	
 	}
+//	void Update(){
+//		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+//			get_signal (1);
+//		}
+//	}
 
 }

@@ -9,22 +9,5 @@ public class dis7_main_control : MonoBehaviour {
 		gameObject.GetComponentInChildren<display_7_2_control>().get_signal(main_signal[2]);
 		gameObject.GetComponentInChildren<display7_3_control>().get_signal(main_signal[3]);
 	}
-	// Use this for initialization
-	void Start () {
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			//test
-			int[] test=new int[4]{1,2,3,4};
-			get_signal (test);
-		}
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			//test
-			int[] test=new int[4]{15,14,13,12};
-			get_signal (test);
-		}
-	}
 }

@@ -13,19 +13,5 @@ public class Instr_light_main_control : MonoBehaviour {
 	void Start () {
 
 	}
-
-	// Update is called once per frame
-	void Update () {
-		//test
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			//test
-			int[] test=new int[4]{3,4,5,6};
-			get_signal (test);
-		}
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			//test
-			int[] test=new int[4]{10,11,12,13};
-			get_signal (test);
-		}
-	}
+		
 }

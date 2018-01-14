@@ -8,6 +8,11 @@ public class execute_program : MonoBehaviour {
 	private GameObject DB_access;
 	private GameObject Main_access;
 
+	private float waiting_second = 1;
+	//run speed
+	public void change_waiting_second(float delta){
+		waiting_second = delta;
+	}
 	private int[] get_data(int[] P_C){
 		return Main_access.GetComponentInParent<Main_controller>().get_D_by_A(P_C);//get the data of now pc
 	}
@@ -42,6 +47,7 @@ public class execute_program : MonoBehaviour {
 		//retrun 1 if successfully run to end, 2 need enter, 0 is error
 		int[] P_C = new int[2]{0,1};
 		PC_access.GetComponent<PC> ().set_PC (P_C);//set to 1,0
+		this.GetComponentInChildren<overflow_light_main_control>().get_signal(0);//init overflow_light
 		//start at 1,0
 		while(game_running && P_C[1]>0){//usually won't auto break
 			int[] data=get_data(P_C);//get the data of the P_C now
@@ -58,7 +64,6 @@ public class execute_program : MonoBehaviour {
 			int check_overflow;//for case 1, to
 
 			//start
-			this.GetComponentInChildren<overflow_light_main_control>().get_signal(0);//init overflow_light
 			Main_access.GetComponent<Main_controller>().update_PC_lights(P_C);
 			Main_access.GetComponent<Main_controller>().update_Instr_lights(data);
 			//start - deal with the lights
@@ -69,7 +74,9 @@ public class execute_program : MonoBehaviour {
 				break;
 			case 1://Add
 				R_d = (short)(R_s + R_t);//mayoverflow
-				check_overflow = R_s+R_t;
+				check_overflow = (int)R_t+(int)R_s;
+				Debug.Log("R_d is "+ R_d);
+				Debug.Log("Check_overflow is "+ check_overflow);
 				if (R_d != check_overflow) {//overflow
 					this.GetComponentInChildren<overflow_light_main_control> ().get_signal (1);//show overflow
 				}
@@ -107,10 +114,12 @@ public class execute_program : MonoBehaviour {
 				int[] data_8;
 				if (data_addr_ary [0] == 15 && data_addr_ary [1] == 15) {//load FF
 					isEnter=true;
+					Main_access.GetComponent<Main_controller> ().change_machine_status(2);
 					while(isEnter){
 						//do nothing but wait
 						yield return new WaitForSeconds((float)0.3);//check every 0.3 second
 					}
+					Main_access.GetComponent<Main_controller> ().change_machine_status(1);
 					data_8 = Main_access.GetComponent<Main_controller> ().get_D_A (0);//get now input
 				} else {
 					data_8 = Main_access.GetComponent<Main_controller> ().get_D_by_A (data_addr_ary);
@@ -185,7 +194,7 @@ public class execute_program : MonoBehaviour {
 				game_running = false;
 				break;
 			}
-			yield return new WaitForSeconds(1);
+			yield return new WaitForSeconds (waiting_second);
 		}
 		Main_access.GetComponent<Main_controller> ().change_machine_status(0);//set not running
 

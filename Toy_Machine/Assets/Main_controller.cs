@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Main_controller : MonoBehaviour {
 	private int machine_status = 0;//0 is stop, 1 is runnig,2 is waiting enter_input
@@ -64,9 +65,51 @@ public class Main_controller : MonoBehaviour {
 			Debug.Log ("error set_pc");
 		}
 	}
-	public void Load_input(){//update pc, pc light , Instr light, DB
-		int[] Addr = get_D_A(1);
-		int[] Data = get_D_A(0);
+
+	public int ConvertChar(char a){
+		if (a <= 'F' && a >= 'A')
+			return a - 'A' + 10;
+		else
+			return a - '0';
+	}
+
+	public int[] GetAddrfromInput(){
+		GameObject input = GameObject.Find("input");
+		string now = input.GetComponent<Text>().text;
+		char[] myChars = now.ToCharArray();
+		int[] addr = new int[2];
+		//print(now);
+		addr[1] = ConvertChar(myChars[0]);
+		addr[0] = ConvertChar (myChars [1]);
+		return addr;
+	}
+	public int[] GetDatafromInput() {
+		GameObject input = GameObject.Find("input");
+		string now = input.GetComponent<Text>().text;
+		char[] myChars = now.ToCharArray();
+		int[] num = new int[4];
+		num [3] = ConvertChar (myChars [3]);
+		num[2] = ConvertChar (myChars [4]);
+		num[1] = ConvertChar (myChars [5]);
+		num[0] = ConvertChar (myChars [6]);
+		return num;
+	}
+
+	public void Load_input(int Type){//update pc, pc light , Instr light, DB
+		//Type 0 Get from Switchs
+		//Type 1 Get from inputfeild
+		int[] Addr = new int[2];
+		int[] Data = new int[4];
+		if (Type == 0)
+		{
+			Addr = get_D_A(1);
+			Data = get_D_A(0);
+		}
+		else {
+			Addr = GetAddrfromInput();
+			Data = GetDatafromInput();
+		}
+
 		if (DB_access.GetComponent<Data_Base> ().set_Memory (Addr, Data) != 1) {
 			Debug.Log ("error /Main_controller/load_input");
 		} else {//fine
@@ -74,7 +117,6 @@ public class Main_controller : MonoBehaviour {
 			update_PC_lights(Addr);//update pc_lights
 			update_Instr_lights(Data);//update Instr lights
 		}
-
 	}
 
 	public void execute(){

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - the_row
+  - the_unit
   layers:
   - Default
   - TransparentFX
