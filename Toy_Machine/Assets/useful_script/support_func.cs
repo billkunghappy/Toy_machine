@@ -30,9 +30,19 @@ public class support_func : MonoBehaviour {
 	public short bit_4x4_to_short(int[] data){
 		int sum = 0;
 		for (int i = 0; i < 4; i++) {
-			sum += data [0] * power_16 (i);
+			sum += data [i] * power_16 (i);
+			print ("sum is " + sum);
 		}
+		print ("total sum is " + sum);
 		return (short)sum;
+	}
+	public int[] short_to_bit_4x4(short data){
+		int[] return_data = new int[4]{0,0,0,0};
+		for (int i = 3; i >=0; i--) {
+			return_data[i] = data / power_16 (i);
+			data -= (short)(return_data [i] * power_16 (i));
+		}
+		return return_data;
 	}
 
 }

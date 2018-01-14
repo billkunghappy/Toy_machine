@@ -51,11 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CreateDateBase.cs" />
      <Compile Include="Assets\Data_Base.cs" />
      <Compile Include="Assets\execute_program.cs" />
      <Compile Include="Assets\input\button_control\enter_btn.cs" />
      <Compile Include="Assets\input\button_control\load_btn.cs" />
      <Compile Include="Assets\input\button_control\look_btn.cs" />
+     <Compile Include="Assets\input\button_control\run_btn.cs" />
      <Compile Include="Assets\input\switch_addr\switch_addr_each.cs" />
      <Compile Include="Assets\input\switch_addr\switch_addr_main_control.cs" />
      <Compile Include="Assets\input\switch_data\switch_data_each.cs" />
@@ -76,7 +78,6 @@
      <Compile Include="Assets\output\sev_display_light\display_7_2_control.cs" />
      <Compile Include="Assets\output\sev_display_light\display7_3_control.cs" />
      <Compile Include="Assets\PC.cs" />
-     <Compile Include="Assets\test_coroutine.cs" />
      <Compile Include="Assets\useful_script\convert_signal.cs" />
      <Compile Include="Assets\useful_script\support_func.cs" />
  <Reference Include="UnityEngine.UIAutomation">

@@ -94,27 +94,26 @@ public class execute_program : MonoBehaviour {
 				R_d = (short)data_addr;
 				DB_access.GetComponent<Data_Base> ().set_register_byid (data [2], R_d);//set register
 				break;
-//			case 8://load Mem[addr], may stdin
-//				int[] data_get;
-//				if (data_addr_ary [0] == 15 && data_addr_ary [1] == 15) {//load FF
-//					
-//				} else {
-//					data_get = Main_access.GetComponent<Main_controller> ().get_D_by_A (data_addr_ary);
-//					R_d = this.GetComponent<support_func> ().bit_4x4_to_short (data_get);
-//					DB_access.GetComponent<Data_Base> ().set_register_byid (data [2], R_d);//set register
-//				}
-//				break;
-//			case 9://store
-				
-
+			case 8://load Mem[addr], may stdin
+				int[] data_get;
+				if (data_addr_ary [0] == 15 && data_addr_ary [1] == 15) {//load FF
+					//done nothing
+				} else {
+					data_get = Main_access.GetComponent<Main_controller> ().get_D_by_A (data_addr_ary);
+					R_d = this.GetComponent<support_func> ().bit_4x4_to_short (data_get);
+					print ("R_D is " + R_d);
+					DB_access.GetComponent<Data_Base> ().set_register_byid (data [2], R_d);//set register
+				}
+				break;
+			case 9://store
+				R_d = DB_access.GetComponent<Data_Base> ().get_register_byid (data [2]);
+				if (data_addr_ary [0] == 15 && data_addr_ary [1] == 15) {//stdout
+					int[] data_7dis = GetComponent<support_func> ().short_to_bit_4x4 (R_d);
+					Main_access.GetComponent<Main_controller> ().update_7display (data_7dis);
+				}
+				break;
 			}
-
-
-
-
-
-
-
+						
 
 			//end
 			P_C=next_P_C(P_C);
@@ -123,6 +122,7 @@ public class execute_program : MonoBehaviour {
 				break;
 			}
 		}
+
 		return 0;
 
 

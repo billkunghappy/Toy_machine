@@ -42,12 +42,17 @@ public class Main_controller : MonoBehaviour {
 			return 1;
 		}
 	}
+	//############################# lights #############################
 	public void update_PC_lights(int[] Addr){
 		this.GetComponentInChildren<PC_light_main_control> ().get_signal (Addr);
 	}
 	public void update_Instr_lights(int[] Data){
 		this.GetComponentInChildren<Instr_light_main_control> ().get_signal (Data);
 	}
+	public void update_7display(int[] data){//data is int[4]
+		this.GetComponentInChildren<dis7_main_control> ().get_signal (data);
+	}
+	//############################# lights #############################
 	public void Look(){
 		int[] Addr = get_D_A(1);
 		int[] Data = get_D_by_A(Addr);
@@ -72,6 +77,9 @@ public class Main_controller : MonoBehaviour {
 
 	}
 
+	public void execute(){
+		this.GetComponentInChildren<execute_program> ().run_program_from_begging ();
+	}
 
 	void Start () {
 		DB_access=GameObject.Find("database"); //get access to DB
