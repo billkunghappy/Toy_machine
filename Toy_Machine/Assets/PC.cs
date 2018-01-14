@@ -7,6 +7,9 @@ public class PC : MonoBehaviour {
 	//public for debug
 
 	// Use this for initialization
+	public int[] get_now_PC(){
+		return P_C;
+	}
 	public int set_PC(int[] Addr){//return 1 if success
 		if(Addr[0]>=16||Addr[1]>=16||Addr[0]<0||Addr[1]<0){
 			return 0;

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Main_controller : MonoBehaviour {
-	private int machine_status = 0;//0 is stop, 1 is runnig
+	private int machine_status = 0;//0 is stop, 1 is runnig,-1 is waiting enter_input
 	private GameObject DB_access;
 	private GameObject PC_access;
+	private GameObject EP_access;
 	// Use this for initialization
 
 	private int[] get_D_A(int flag){//flag==0, get data, flag==1, get addr
@@ -65,13 +66,12 @@ public class Main_controller : MonoBehaviour {
 		}
 
 	}
-	void Main_progress(){
-		//progress here
-	}
+
 
 	void Start () {
 		DB_access=GameObject.Find("database"); //get access to DB
 		PC_access=GameObject.Find("PC"); //get access to PC
+		EP_access=GameObject.Find("Execute_program"); //get access to PC
 	}
 	
 	// Update is called once per frame
