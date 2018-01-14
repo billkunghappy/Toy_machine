@@ -169,3 +169,4 @@ af90c040ac8d37b1b1b7a5de53a332a5 Assembly-CSharp.dll:.CreateDateBase
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.status_light_main_control
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.input_btn
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.speed_scroll
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.unity_chian_rotate

@@ -85,6 +85,7 @@
      <Compile Include="Assets\output\sev_display_light\display7_3_control.cs" />
      <Compile Include="Assets\output\status_light_main_control.cs" />
      <Compile Include="Assets\PC.cs" />
+     <Compile Include="Assets\unity_chian_rotate.cs" />
      <Compile Include="Assets\useful_script\convert_signal.cs" />
      <Compile Include="Assets\useful_script\support_func.cs" />
  <Reference Include="UnityEngine.UIAutomation">
