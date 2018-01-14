@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class support_func : MonoBehaviour {
-	public GameObject Main_access;
 	public int power_2(int a){
 		int sum = 1;
 		for (int i = 0; i < a; i++) {
@@ -28,20 +27,26 @@ public class support_func : MonoBehaviour {
 		return sum;
 	}
 	public short bit_4x4_to_short(int[] data){
-		int sum = 0;
+		ushort sum = 0;
 		for (int i = 0; i < 4; i++) {
-			sum += data [i] * power_16 (i);
+			sum += (ushort)(data [i] * power_16 (i));
 			print ("sum is " + sum);
 		}
-		print ("total sum is " + sum);
+		Debug.Log(sum+"=.="+(short)sum);
 		return (short)sum;
 	}
 	public int[] short_to_bit_4x4(short data){
 		int[] return_data = new int[4]{0,0,0,0};
+
+		ushort data_cache = 0;
+		data_cache = (ushort)data;
+		Debug.Log (data_cache + " == " + data);
 		for (int i = 3; i >=0; i--) {
-			return_data[i] = data / power_16 (i);
-			data -= (short)(return_data [i] * power_16 (i));
+			return_data[i] = data_cache / power_16 (i);
+			print (i + " is " + return_data [i]);
+			data_cache -= (ushort)(return_data [i] * power_16 (i));
 		}
+			
 		return return_data;
 	}
 

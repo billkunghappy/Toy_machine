@@ -58,6 +58,7 @@
      <Compile Include="Assets\input\button_control\load_btn.cs" />
      <Compile Include="Assets\input\button_control\look_btn.cs" />
      <Compile Include="Assets\input\button_control\run_btn.cs" />
+     <Compile Include="Assets\input\button_control\stop_btn.cs" />
      <Compile Include="Assets\input\switch_addr\switch_addr_each.cs" />
      <Compile Include="Assets\input\switch_addr\switch_addr_main_control.cs" />
      <Compile Include="Assets\input\switch_data\switch_data_each.cs" />

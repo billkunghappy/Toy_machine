@@ -13,9 +13,7 @@ public class Data_Base : MonoBehaviour {
 		}
 		return return_data;
 	}
-	public int set_Memory_FF(int[] Data){
-		return 1;
-	}
+
 	public int set_Memory(int[] ADDR,int[] Data){//return 1 if set successfully
 		for (int i = 0; i < 2; i++) {
 			if (ADDR [i] >= 16 || ADDR [i] < 0) {
