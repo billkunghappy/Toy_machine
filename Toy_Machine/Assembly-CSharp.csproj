@@ -76,6 +76,7 @@
      <Compile Include="Assets\output\sev_display_light\display_7_2_control.cs" />
      <Compile Include="Assets\output\sev_display_light\display7_3_control.cs" />
      <Compile Include="Assets\PC.cs" />
+     <Compile Include="Assets\test_coroutine.cs" />
      <Compile Include="Assets\useful_script\convert_signal.cs" />
      <Compile Include="Assets\useful_script\support_func.cs" />
  <Reference Include="UnityEngine.UIAutomation">

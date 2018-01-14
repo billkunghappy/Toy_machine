@@ -10,6 +10,7 @@ public class load_btn : MonoBehaviour {
 	void Start () {
 		main_controller = GameObject.Find("Main_controller");//get access to main_controller
 		GetComponent<Button>().onClick.AddListener(Load_input);
+		print ("test test hello");
 
 	}
 	

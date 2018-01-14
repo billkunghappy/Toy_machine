@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class support_func : MonoBehaviour {
+	public GameObject Main_access;
 	public int power_2(int a){
 		int sum = 1;
 		for (int i = 0; i < a; i++) {

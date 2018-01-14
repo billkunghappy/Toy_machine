@@ -26,7 +26,7 @@ public class execute_program : MonoBehaviour {
 		}
 		return P_C;
 	}
-
+		
 	public int run_program_from_begging(){
 		//retrun 1 if successfully run to end, 2 need enter, 0 is error
 		PC_access=GameObject.Find("PC"); //get access to PC
@@ -97,12 +97,12 @@ public class execute_program : MonoBehaviour {
 //			case 8://load Mem[addr], may stdin
 //				int[] data_get;
 //				if (data_addr_ary [0] == 15 && data_addr_ary [1] == 15) {//load FF
-//					GameObject.Find("enter_btn").GetComponent<Button>().onClick.AddListener(Load_input);
+//					
 //				} else {
 //					data_get = Main_access.GetComponent<Main_controller> ().get_D_by_A (data_addr_ary);
+//					R_d = this.GetComponent<support_func> ().bit_4x4_to_short (data_get);
+//					DB_access.GetComponent<Data_Base> ().set_register_byid (data [2], R_d);//set register
 //				}
-//				R_d = this.GetComponent<support_func> ().bit_4x4_to_short (data_get);
-//				DB_access.GetComponent<Data_Base> ().set_register_byid (data [2], R_d);//set register
 //				break;
 //			case 9://store
 				

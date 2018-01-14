@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Main_controller : MonoBehaviour {
-	private int machine_status = 0;//0 is stop, 1 is runnig,-1 is waiting enter_input
+	private int machine_status = 0;//0 is stop, 1 is runnig,2 is waiting enter_input
 	private GameObject DB_access;
 	private GameObject PC_access;
 	private GameObject EP_access;
 	// Use this for initialization
-
-	private int[] get_D_A(int flag){//flag==0, get data, flag==1, get addr
+	public void change_machine_status (int a){
+		machine_status = a;
+	}
+	public int get_machine_status (){
+		return machine_status ;
+	}
+	public int[] get_D_A(int flag){//flag==0, get data, flag==1, get addr
 		int[,] input_addr,input_data;
 		input_addr = gameObject.GetComponentInChildren<switch_addr_main_control> ().get_signal ();//[2,4] bit
 		input_data = gameObject.GetComponentInChildren<switch_data_main_control> ().get_signal ();//[4,4]
