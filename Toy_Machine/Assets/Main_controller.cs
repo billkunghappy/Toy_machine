@@ -27,7 +27,7 @@ public class Main_controller : MonoBehaviour {
 			return Addr;
 		}
 	}
-	private int[] get_D_by_A(int[] Addr){
+	public int[] get_D_by_A(int[] Addr){
 		return DB_access.GetComponent<Data_Base> ().get_data (Addr);
 	}
 	public int check_running(){//run is 1

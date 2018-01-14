@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Data_Base.cs" />
      <Compile Include="Assets\execute_program.cs" />
+     <Compile Include="Assets\input\button_control\enter_btn.cs" />
      <Compile Include="Assets\input\button_control\load_btn.cs" />
      <Compile Include="Assets\input\button_control\look_btn.cs" />
      <Compile Include="Assets\input\switch_addr\switch_addr_each.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\output\Instr_light\Instr_light_dig2_control.cs" />
      <Compile Include="Assets\output\Instr_light\Instr_light_dig3_control.cs" />
      <Compile Include="Assets\output\Instr_light\Instr_light_main_control.cs" />
+     <Compile Include="Assets\output\overflow_light_main_control.cs" />
      <Compile Include="Assets\output\PC_light\PC_light_dig0_control.cs" />
      <Compile Include="Assets\output\PC_light\PC_light_dig1_control.cs" />
      <Compile Include="Assets\output\PC_light\PC_light_main_control.cs" />
